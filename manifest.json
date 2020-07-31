@@ -2,7 +2,7 @@
     "name": "Better",
     "version": "0.1",
     "description": "Find better products & services than the one you're currently visiting",
-    "permissions": ["activeTab"],
+    "permissions": ["activeTab", "storage"],
     "background": {
         "scripts": ["background.js"],
         "persistent": false
@@ -13,5 +13,6 @@
             "js": ["contentscript.js"]
         }
     ],
-    "manifest_version": 2
+    "manifest_version": 2,
+    "options_page": "options.html"
   }

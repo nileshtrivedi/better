@@ -1,10 +1,12 @@
 // document.body.style.border = "15px solid red";
 
-/* TODO
- - Pop-up should be dismissable
- - Once dismissed, popup should not be shown. Use cookies or localStorage for this
- - List of alternatives should be loaded from a user-specified external source. Can be modified via extension options.
- - Pop-up should be formatted to look better
+/* 
+TODO
+ - Pop-up should be formatted to look better.
+ - Pop-up should be dismissable (per URL / per domain).
+ - Once dismissed, popup should not be shown on the same url/domain. Use cookies or localStorage for this.
+ - List of alternatives should be loaded from a user-specified external source. Can be modified via options.html/options.js
+ - Since we're replacing innerHTML, we should protect against XSS attacks.
 */
 
 BETTER_ALTERNATIVES = [
