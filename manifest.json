@@ -1,0 +1,17 @@
+{
+    "name": "Better",
+    "version": "0.1",
+    "description": "Find better products & services than the one you're currently visiting",
+    "permissions": ["activeTab"],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+      },
+    "content_scripts": [
+        {
+            "matches": ["https://*/*", "http://*/*"],
+            "js": ["contentscript.js"]
+        }
+    ],
+    "manifest_version": 2
+  }
