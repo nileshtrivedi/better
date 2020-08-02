@@ -1,24 +1,17 @@
 // document.body.style.border = "15px solid red";
 
 /* 
+
+IN PROGRESS: 
+
+- List of alternatives should be loaded from a user-specified external source. Can be modified via options.html/options.js
+
 TODO
  - Pop-up should be formatted to look better.
  - Pop-up should be dismissable (per URL / per domain).
  - Once dismissed, popup should not be shown on the same url/domain. Use cookies or localStorage for this.
- - List of alternatives should be loaded from a user-specified external source. Can be modified via options.html/options.js
  - Since we're replacing innerHTML, we should protect against XSS attacks.
 */
-
-BETTER_ALTERNATIVES = [
-  [ /https?:\/\/(www.)?google.com\/chrome/ , "A better alternative is <a href='https://mozilla.com' target='_blank'>Mozilla</a>."]
-]
-
-function findBetter(url) {
-    var match = BETTER_ALTERNATIVES.find(pattern => url.match(pattern[0]));
-    if(match)
-        return match[1];
-    else return null;
-}
 
 function showBetter(alternative) {
     if(!alternative) return;
@@ -37,3 +30,9 @@ function showBetter(alternative) {
 }
 
 showBetter(findBetter(document.location.href));
+
+chrome.runtime.sendMessage({type: 'getMatch', url: document.location.href}, (response) => {
+    if (response) {
+        showBetter(response);
+    }
+});
