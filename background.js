@@ -3,9 +3,10 @@ var BETTER_ALTERNATIVES = [];
 
 chrome.runtime.onInstalled.addListener(function() {
   console.log('onInstalled....');
+  onStartup();
 });
 
-// fetch and save data when chrome restarted, alarm will continue running when chrome is restarted
+// fetch and save data when chrome restarted
 chrome.runtime.onStartup.addListener(() => {
   console.log('onStartup....');
   onStartup();
@@ -29,7 +30,7 @@ function onStartup(){
 }
 
 function getMatch(url){
-  var match = BETTER_ALTERNATIVES.find(pattern => url.match(new Regexp(pattern[0])));
+  var match = BETTER_ALTERNATIVES.find(pattern => url.match(new RegExp(pattern[0])));
   if(match)
       return match[1];
   else return null;
@@ -39,6 +40,9 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
   switch (msg.type) {
       case 'getMatch':
           response(getMatch(msg.url));
+          break;
+      case 'reloadList':
+          onStartup();
           break;
       default:
           response('unknown request');

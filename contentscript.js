@@ -11,6 +11,9 @@ TODO
  - Pop-up should be dismissable (per URL / per domain).
  - Once dismissed, popup should not be shown on the same url/domain. Use cookies or localStorage for this.
  - Since we're replacing innerHTML, we should protect against XSS attacks.
+ - Fix and test the options UI
+ - Test and fix for Chrome, Brave & Firefox
+
 */
 
 function showBetter(alternative) {
@@ -28,8 +31,6 @@ function showBetter(alternative) {
     betterdiv.innerHTML = alternative;
     document.body.appendChild(betterdiv);
 }
-
-showBetter(findBetter(document.location.href));
 
 chrome.runtime.sendMessage({type: 'getMatch', url: document.location.href}, (response) => {
     if (response) {
