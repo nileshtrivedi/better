@@ -1,3 +1,27 @@
 [
-    [ "https?:\/\/(www.)?google.com\/chrome" , "A better alternative is <a href='https://mozilla.com' target='_blank'>Mozilla</a>."]
+	{
+		"urlPattern": "https?:\/\/(www.)?google.com\/chrome",
+		"alternatives": [
+			{
+				"url": "https://mozilla.com",
+				"name": "Mozilla Firefox",
+				"desc": "Firefox is open source, backed by the Mozilla Foundation"
+			},
+			{
+				"url": "https://brave.org",
+				"name": "Brave Browser",
+				"desc": "Brave is open source, new-generation browser."
+			}
+		]
+	},
+	{
+		"urlPattern": "https?:\/\/(www.)?slack.com",
+		"alternatives": [
+			{
+				"url": "https://matrix.org",
+				"name": "Matrix / Element",
+				"desc": "An open network for secure, decentralized communication"
+			}
+		]
+	}
 ]
