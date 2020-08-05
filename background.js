@@ -19,7 +19,7 @@ function onStartup(){
 
         var listUrl = result.betterSourceURL || DEFAULT_LIST_URL
         // Uncomment this when testing list changes locally
-        // listUrl = "/defaultlist.json"
+        listUrl = "/defaultlist.json"
         fetch(listUrl)
         .then(response => response.json())
         .then(data => {

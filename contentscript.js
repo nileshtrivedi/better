@@ -2,15 +2,9 @@
 
 /*
 
-IN PROGRESS:
-
-- List of alternatives should be loaded from a user-specified external source. Can be modified via options.html/options.js
-
 TODO
- - Pop-up should be formatted to look better.
- - Pop-up should be dismissable (per URL / per domain).
+  - Pop-up should be dismissable (per URL / per domain).
  - Once dismissed, popup should not be shown on the same url/domain. Use cookies or localStorage for this.
- - Since we're replacing innerHTML, we should protect against XSS attacks.
  - Fix and test the options UI
  - Test and fix for Chrome, Brave & Firefox
 
@@ -20,7 +14,7 @@ const fillTemplate = function(templateString, templateVars){
 }
 
 const altTemplate = "\
-<a href='${this.url}' \
+<a href='${this.url}' target='_blank' \
    style='display: block; border: 2px solid #222222; border-radius: 4px; margin-top: 12px; color:#222222; padding: 8px;'> \
   <p style='margin: 0; font-size: 14px; font-weight: bold;'>${this.name} &rarr;</p> \
   <p style='margin: 0; font-size: 12px;'>${this.desc}</p> \
@@ -50,6 +44,7 @@ function createRecommendedAlt(recommendedAlternative) {
     let alternativeCTA = document.createElement("a");
     alternativeCTA.innerHTML = recommendedAlternative.name + " &rarr;";
     alternativeCTA.setAttribute("href", recommendedAlternative.url);
+    alternativeCTA.setAttribute("target", "_blank");
     alternativeCTA.setAttribute("style", "display: inline-block; padding: 12px 24px; background-color: #222222; color: #ffffff; border-radius: 4px;");
 
     recommendedAlt.appendChild(betterBrandText);
@@ -64,7 +59,8 @@ function showBetter(alternatives) {
     let betterdiv = document.createElement("div");
     betterdiv.setAttribute("style",
                            "background-color: #ffcc49; position: fixed; bottom: 10px; right: 10px; width: 300px; \
-                            box-shadow: 0px 10px 30px #222222; padding: 12px; text-align: center; font-size: 20px;")
+                            box-shadow: 0px 10px 30px #222222; padding: 12px; text-align: center; font-size: 20px; \
+                            z-index: 20000;")
 
     betterdiv.appendChild(createRecommendedAlt(alternatives[0]));
 

@@ -3,12 +3,12 @@
 		"urlPattern": "https?:\/\/(www.)?google.com\/chrome",
 		"alternatives": [
 			{
-				"url": "https://mozilla.com",
+				"url": "https://getfirefox.com",
 				"name": "Mozilla Firefox",
 				"desc": "Firefox is open source, backed by the Mozilla Foundation"
 			},
 			{
-				"url": "https://brave.org",
+				"url": "https://brave.com",
 				"name": "Brave Browser",
 				"desc": "Brave is open source, new-generation browser."
 			}
@@ -21,6 +21,16 @@
 				"url": "https://matrix.org",
 				"name": "Matrix / Element",
 				"desc": "An open network for secure, decentralized communication"
+			}
+		]
+	},
+	{
+		"urlPattern": "https:\/\/twitter.com\/i\/flow\/signup",
+		"alternatives": [
+			{
+				"url": "https://https://fediverse.party/",
+				"name": "Fediverse",
+				"desc": "Decentralized like email"
 			}
 		]
 	}
