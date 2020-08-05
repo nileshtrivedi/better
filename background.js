@@ -17,7 +17,10 @@ function onStartup(){
     chrome.storage.sync.get(['betterSourceURL'], function(result) {
         console.log('Value currently is ' + (result.betterSourceURL || DEFAULT_LIST_URL));
 
-        fetch((result.betterSourceURL || DEFAULT_LIST_URL))
+        var listUrl = result.betterSourceURL || DEFAULT_LIST_URL
+        // Uncomment this when testing list changes locally
+        // listUrl = "/defaultlist.json"
+        fetch(listUrl)
         .then(response => response.json())
         .then(data => {
             console.log("Got data: ", data);
@@ -30,9 +33,9 @@ function onStartup(){
 }
 
 function getMatch(url){
-  var match = BETTER_ALTERNATIVES.find(pattern => url.match(new RegExp(pattern[0])));
-  if(match)
-      return match[1];
+  var match = BETTER_ALTERNATIVES.find(pattern => url.match(new RegExp(pattern.urlPattern)));
+  if(match && match.alternatives)
+      return match.alternatives;
   else return null;
 }
 
