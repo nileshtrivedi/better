@@ -36,8 +36,8 @@ function createNonRecommendedAlts(alternatives) {
     return nonRecommendedAlts;
 }
 
-function createRecommendedAlt(alternative) {
-    let recommendedAlt = document.crateElement("div");
+function createRecommendedAlt(recommendedAlternative) {
+    let recommendedAlt = document.createElement("div");
 
     let betterBrandText = document.createElement("h1");
     betterBrandText.innerHTML = "Better";
