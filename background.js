@@ -35,7 +35,7 @@ function onStartup(){
 function getMatch(url){
   var match = BETTER_ALTERNATIVES.find(pattern => url.match(new RegExp(pattern.urlPattern)));
   if(match && match.alternatives)
-      return match.alternatives;
+      return match;
   else return null;
 }
 

@@ -53,8 +53,9 @@ function createRecommendedAlt(recommendedAlternative) {
     return recommendedAlt;
 }
 
-function showBetter(alternatives) {
-    if(!alternatives) return;
+function showBetter(match) {
+    if(!match || !match.alternatives) return;
+    let alternatives = match.alternatives;
 
     let betterdiv = document.createElement("div");
     betterdiv.setAttribute("style",
@@ -71,12 +72,35 @@ function showBetter(alternatives) {
     let dismissButton = document.createElement("button");
     dismissButton.innerHTML = "&cross; Dismiss suggestion for this URL";
     dismissButton.setAttribute("style", "display: block; font-size: 14px; margin: 16px auto;");
+    dismissButton.addEventListener("click", () => {
+        document.body.removeChild(betterdiv);
+        dismissPermanently(match);
+    })
+
     betterdiv.appendChild(dismissButton);
     document.body.appendChild(betterdiv);
 }
 
+function dismissPermanently(match) {
+    let key = `dismiss@${match.urlPattern}`
+    chrome.storage.local.set({
+        [key]: true,
+    });
+}
+
+function ifNotDissmissed(match, callback) {
+    let key = `dismiss@${match.urlPattern}`
+    chrome.storage.local.get(key, (item) => {
+        if (item && item[key]) {
+            return;
+        } else {
+          callback(match);
+        }
+    })
+}
+
 chrome.runtime.sendMessage({type: 'getMatch', url: document.location.href}, (response) => {
     if (response) {
-        showBetter(response);
+        ifNotDissmissed(response, showBetter);
     }
 });
