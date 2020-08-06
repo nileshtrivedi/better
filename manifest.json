@@ -1,6 +1,10 @@
 {
     "name": "Better",
-    "version": "0.1",
+    "version": "0.0.1",
+    "icons": {
+      "48": "images/48.png",
+      "128": "images/128.png"
+    },
     "description": "Find better products & services than the one you're currently visiting",
     "permissions": ["activeTab", "storage"],
     "background": {
