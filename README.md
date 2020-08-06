@@ -1,6 +1,6 @@
 # Better
 
-![image](https://user-images.githubusercontent.com/19304/89511472-97abdd80-d7ef-11ea-9af2-59f7e8cb4224.png)
+![image](https://user-images.githubusercontent.com/19304/89511791-fcffce80-d7ef-11ea-9d2e-e2557d77a9b3.png)
 
 This is a browser extensions that recommends better alternatives to products and service that you're currently visiting. "Better" could mean ethical or cheaper or local or higher-quality or something else. So, while we ship a default list, users will be able to subscribe to multiple sources for recommendations.
 
