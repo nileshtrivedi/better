@@ -3,14 +3,19 @@
 /*
 
 TODO
-  - Pop-up should be dismissable (per URL / per domain).
- - Once dismissed, popup should not be shown on the same url/domain. Use cookies or localStorage for this.
  - Fix and test the options UI
  - Test and fix for Chrome, Brave & Firefox
 
 */
+function escapeHtml(str) {
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+}
+
 const fillTemplate = function(templateString, templateVars){
-    return new Function("return `"+templateString +"`;").call(templateVars);
+    let safeTemplateVars = Object.assign({}, ...Object.keys(templateVars).map(k => ({[k]: escapeHtml(templateVars[k])})));
+    return new Function("return `"+templateString +"`;").call(safeTemplateVars);
 }
 
 const altTemplate = "\
@@ -34,16 +39,17 @@ function createRecommendedAlt(recommendedAlternative) {
     let recommendedAlt = document.createElement("div");
 
     let betterBrandText = document.createElement("h1");
-    betterBrandText.innerHTML = "Better";
+    betterBrandText.textContent = "Better";
     betterBrandText.setAttribute("style", "font-size: 32px; color: #222222; font-weight: bold; margin: 12px;");
 
     let alternativeText = document.createElement("p");
-    alternativeText.innerHTML = recommendedAlternative.desc;
-    alternativeText.setAttribute("style", "font-size: 20px; color: #222222; font-weight: bold; margin-top: 24px;");
+    alternativeText.textContent = recommendedAlternative.desc;
+    alternativeText.setAttribute("style", "font-size: 20px; color: #222222; font-weight: bold; margin-top: 24px; line-height:1;");
 
     let alternativeCTA = document.createElement("a");
-    alternativeCTA.innerHTML = recommendedAlternative.name + " &rarr;";
-    alternativeCTA.setAttribute("href", recommendedAlternative.url);
+    alternativeCTA.textContent = recommendedAlternative.name;
+    alternativeCTA.innerHTML += " &rarr;";
+    alternativeCTA.setAttribute("href", escapeHtml(recommendedAlternative.url));
     alternativeCTA.setAttribute("target", "_blank");
     alternativeCTA.setAttribute("style", "display: inline-block; padding: 12px 24px; background-color: #222222; color: #ffffff; border-radius: 4px;");
 
