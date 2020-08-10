@@ -1,6 +1,6 @@
 [
 	{
-		"urlPattern": "https?:\/\/(www.)?google.com\/chrome",
+		"urlPattern": "https://(www.)?google.com/chrome",
 		"alternatives": [
 			{
 				"url": "https://getfirefox.com",
@@ -15,7 +15,7 @@
 		]
 	},
 	{
-		"urlPattern": "https?:\/\/(www.)?slack.com",
+		"urlPattern": "https?://(www.)?slack.com",
 		"alternatives": [
 			{
 				"url": "https://matrix.org",
@@ -25,12 +25,82 @@
 		]
 	},
 	{
-		"urlPattern": "https:\/\/twitter.com\/i\/flow\/signup",
+		"urlPattern": "https://twitter.com/i/flow/signup",
 		"alternatives": [
 			{
 				"url": "https://https://fediverse.party/",
 				"name": "Fediverse",
 				"desc": "Decentralized like email"
+			}
+		]
+	},
+	{
+		"urlPattern": "https://(www.)?amazon.(com|in)/[\\w\\-]*/?dp/\\w+",
+		"alternatives": [
+			{
+				"url": "https://switching.software/replace/amazon-books/",
+				"name": "Explore",
+				"desc": "switching.software recommends a few alternatives to Amazon Books"
+			}
+		]
+	},
+	{
+		"urlPattern": "https://(www.)?facebook.com",
+		"alternatives": [
+			{
+				"url": "https://switching.software/replace/facebook/",
+				"name": "Explore",
+				"desc": "switching.software recommends Mastodon as a better alternative to Facebook"
+			}
+		]
+	},
+	{
+		"urlPattern": "https://(www.)?youtube.com",
+		"alternatives": [
+			{
+				"url": "https://switching.software/replace/youtube/",
+				"name": "PeerTube",
+				"desc": "switching.software recommends PeerTube as a better alternative to YouTube"
+			}
+		]
+	},
+	{
+		"urlPattern": "https://(www.)?goodreads.com",
+		"alternatives": [
+			{
+				"url": "https://openlibrary.org",
+				"name": "OpenLibrary",
+				"desc": "Internet Archive is building OpenLibrary as a better alternative to GoodReads"
+			}
+		]
+	},
+	{
+		"urlPattern": "https://(www.)?gmail.com",
+		"alternatives": [
+			{
+				"url": "https://switching.software/replace/gmail/",
+				"name": "Explore",
+				"desc": "switching.software recommends ProtonMail, FastMail etc as better alternatives to GMail"
+			}
+		]
+	},
+	{
+		"urlPattern": "https://(\\w+.)?medium.com",
+		"alternatives": [
+			{
+				"url": "https://switching.software/replace/medium/",
+				"name": "Explore",
+				"desc": "switching.software recommends a few alternatives to Medium"
+			}
+		]
+	},
+	{
+		"urlPattern": "https://(www.)?meetup.com",
+		"alternatives": [
+			{
+				"url": "https://gettogether.community/",
+				"name": "GetTogether",
+				"desc": "switching.software recommends GetTogether as a better alternatives to MeetUp.com"
 			}
 		]
 	}
