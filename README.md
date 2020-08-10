@@ -10,7 +10,7 @@ This is a work-in-progress and not yet published. This should work for both Chro
 
 You can load this extension directly in Chrome or Firefox Developer Edition (after setting `xpinstall.signatures.required` to `false` in `about:config`).
 
-To submit to the stores, build a zip with: `zip -r -X archive.zip .`
+To submit to the stores, build a zip with: `zip -r -X archive.zip ./*`
 
 # Contribute
 
