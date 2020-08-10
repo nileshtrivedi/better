@@ -6,6 +6,12 @@ This is a browser extensions that recommends better alternatives to products and
 
 This is a work-in-progress and not yet published. This should work for both Chromium-based (Chrome, Brave, Chromium etc) AND Firefox-based browsers.
 
+# Build
+
+You can load this extension directly in Chrome or Firefox Developer Edition (after setting `xpinstall.signatures.required` to `false` in `about:config`).
+
+To submit to the stores, build a zip with: `zip -r -X archive.zip .`
+
 # Contribute
 
 Check one of the unassigned issues and start a discussion or send a pull request.
