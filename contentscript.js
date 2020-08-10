@@ -70,14 +70,22 @@ function showBetter(match) {
     }
 
     let dismissButton = document.createElement("button");
-    dismissButton.innerHTML = "&cross; Dismiss suggestion for this URL";
-    dismissButton.setAttribute("style", "display: block; font-size: 14px; margin: 16px auto;");
+    dismissButton.innerHTML = "&cross; Do not show suggestion for this URL";
+    dismissButton.setAttribute("style", "display: block; font-size: 14px; margin: 16px auto; cursor:pointer;");
     dismissButton.addEventListener("click", () => {
         document.body.removeChild(betterdiv);
         dismissPermanently(match);
     })
-
     betterdiv.appendChild(dismissButton);
+
+    let closeButton = document.createElement("button");
+    closeButton.innerText = "❌";
+    closeButton.setAttribute("style", "position: absolute; top: -10px; right: -10px; cursor:pointer; background-color: white; border-radius: 15px; border: thin solid #aaa;");
+    closeButton.addEventListener("click", () => {
+        document.body.removeChild(betterdiv);
+    })
+    betterdiv.appendChild(closeButton);
+
     document.body.appendChild(betterdiv);
 }
 

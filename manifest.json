@@ -1,6 +1,6 @@
 {
   "name": "Better",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "icons": {
     "48": "images/48.png",
     "128": "images/128.png"
@@ -10,8 +10,8 @@
       "id": "{02d8a7bd-79ba-4808-8e11-f3e19af43f90}"
     }
   },
-  "description": "Find better products & services than the one you're currently visiting",
-  "permissions": ["activeTab", "storage"],
+  "description": "This extension looks at your current URL, and recommends BETTER product/service alternatives via an in-page pop-up. BETTER could mean ethical / privacy-conscious / secure / local / cheaper / high-quality etc. The extension ships with a default list of recommendations but you can subscribe to lists maintained by others. This allows different interpretations of BETTER to exist and you can subscribe to those that appeals to your preferences the most.",
+  "permissions": ["storage"],
   "background": {
     "scripts": ["background.js"],
     "persistent": false
