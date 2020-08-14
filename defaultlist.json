@@ -103,5 +103,15 @@
 				"desc": "switching.software recommends GetTogether as a better alternatives to MeetUp.com"
 			}
 		]
+	},
+	{
+		"urlPattern": "https?://(www.)?google.co(m|.in)",
+		"alternatives": [
+			{
+				"url": "https://duckduckgo.com",
+				"name": "DuckDuckGo",
+				"desc": "An internet search engine that emphasizes protecting searchers' privacy"
+			}
+		]
 	}
 ]
