@@ -8,9 +8,8 @@ This is a work-in-progress. This should work for both Chromium-based (Chrome, Br
 
 # Installation
 
+[Download on Chrome Webstore](https://chrome.google.com/webstore/detail/better/fhblooichgponllpehbkpihicebfgfll)
 [Download on Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/better-alternatives/)
-
-Chrome Webstore: Coming soon
 
 # Philosophy
 
@@ -27,6 +26,7 @@ The pop-up shows an option to dismiss the suggestion forever for the current URL
 You can load this extension directly in Chrome or Firefox Developer Edition (after setting `xpinstall.signatures.required` to `false` in `about:config`).
 
 To submit to the stores, build a zip with: `zip -r -X archive.zip ./*`
+Before creating the zip, make sure to uncomment the local reference to `listUrl` in `onStartup()` and for Chrome store, remove `browser_specific_settings` from `manifest.json`
 
 # Contribute
 
