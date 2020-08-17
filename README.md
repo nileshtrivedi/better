@@ -4,11 +4,12 @@
 
 This extension looks at your current URL, and recommends "better" product/service alternatives via an in-page pop-up. "Better" could mean ethical / privacy-conscious / secure / local / cheaper / high-quality etc.
 
-This is a work-in-progress. This should work for both Chromium-based (Chrome, Brave, Chromium etc) AND Firefox-based browsers.
+This should work for both Chromium-based (Chrome, Brave, Chromium etc) AND Firefox-based browsers.
 
 # Installation
 
 [Download on Chrome Webstore](https://chrome.google.com/webstore/detail/better/fhblooichgponllpehbkpihicebfgfll)
+
 [Download on Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/better-alternatives/)
 
 # Philosophy
