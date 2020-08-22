@@ -1,5 +1,15 @@
 [
 	{
+		"urlPattern": "https://(www.)?google.com/maps",
+		"alternatives": [
+			{
+				"url": "https://www.openstreetmap.org",
+				"name": "OpenStreetMap",
+				"desc": "Created by people like you and free to use under an open license."
+			}
+		]
+	},
+	{
 		"urlPattern": "https://(www.)?google.com/chrome",
 		"alternatives": [
 			{
