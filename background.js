@@ -14,14 +14,14 @@ chrome.runtime.onStartup.addListener(() => {
 });
 
 function fetchAllLists(listUrls) {
-  var promises = listUrls.map((listUrl) =>
-    fetch(listUrl)
-      .then((resp) => resp.json())
-      .catch((e) => console.log("List errored out", e))
+  var promises = listUrls.map(
+    (listUrl) => fetch(listUrl).then((resp) => resp.json())
+    // .catch((e) => console.log("List errored out", e))
   );
 
-  Promise.all(promises).then((results) => {
-    BETTER_ALTERNATIVES = results;
+  // wait for all requests to complete, ignore errors
+  Promise.all(promises.map((p) => p.catch((e) => null))).then((results) => {
+    BETTER_ALTERNATIVES = results.filter((item) => item != null);
     chrome.storage.local.set({ betterSourceData: results }, function () {
       console.log("Set betterSource");
     });
