@@ -18,12 +18,14 @@ const fillTemplate = function(templateString, templateVars){
     return new Function("return `"+templateString +"`;").call(safeTemplateVars);
 }
 
-const altTemplate = "\
-<a href='${this.url}' target='_blank' \
-   style='display: block; border: 2px solid #222222; border-radius: 4px; margin-top: 12px; color:#222222; padding: 8px;'> \
+const altTemplate =
+  "\
+<a href='${this.url}' target='_blank'> \
   <p style='margin: 0; font-size: 14px; font-weight: bold;'>${this.name} &rarr;</p> \
   <p style='margin: 0; font-size: 12px;'>${this.desc}</p> \
-</a>"
+</a>";
+
+const CONTAINER_PADDING = "12px";
 
 const CONTAINER_STYLES = `
     .better-ext-container * {
@@ -44,9 +46,32 @@ const CONTAINER_STYLES = `
         right: 10px; 
         width: 300px; 
         box-shadow: 0px 10px 30px #222222; 
-        padding: 12px; 
+        padding: ${CONTAINER_PADDING}; 
         text-align: center; 
         z-index: 20000;
+    }
+
+    .better-ext-container .better-ext-alt-container {
+        margin-left: -${CONTAINER_PADDING};
+        margin-right: -${CONTAINER_PADDING};
+        padding: 0 ${CONTAINER_PADDING};
+        margin-top: 4px;
+        max-height: 300px;
+        overflow: scroll;
+        background-color: #FEEBC8;
+    }
+
+    .better-ext-alt-container>a{
+        display: block; 
+        border: 2px solid #222222; 
+        border-radius: 4px; 
+        margin-top: ${CONTAINER_PADDING}; 
+        color:#222222; 
+        padding: 8px;
+    }
+
+    .better-ext-alt-container>a:last-child {
+        margin-bottom: ${CONTAINER_PADDING};
     }
 `;
 
@@ -57,19 +82,19 @@ function addPagePopupStyles() {
 }
 
 function createNonRecommendedAlts(alternatives) {
-    let nonRecommendedAlts = document.createElement("div");
-    nonRecommendedAlts.setAttribute("style", "text-align: left;");
-    let alternativesHeading = document.createElement("p");
-    alternativesHeading.setAttribute("style", "font-size: 12px; text-align: center; margin: 4px 0;");
-    alternativesHeading.innerText = "MORE ALTERNATIVES";
-    nonRecommendedAlts.appendChild(alternativesHeading);
-    let scrollableAltContainer = document.createElement("div");
-    scrollableAltContainer.setAttribute("style", "max-height: 300px; overflow: scroll");
-    alternatives.map((alternative) => {
-      scrollableAltContainer.innerHTML += fillTemplate(altTemplate, alternative);
-    });
-    nonRecommendedAlts.appendChild(scrollableAltContainer);
-    return nonRecommendedAlts;
+  let nonRecommendedAlts = document.createElement("div");
+  nonRecommendedAlts.setAttribute("style", "text-align: left;");
+  let alternativesHeading = document.createElement("p");
+  alternativesHeading.setAttribute("style", "font-size: 12px; text-align: center; margin: 4px 0;");
+  alternativesHeading.innerText = "MORE ALTERNATIVES";
+  nonRecommendedAlts.appendChild(alternativesHeading);
+  let scrollableAltContainer = document.createElement("div");
+  scrollableAltContainer.classList.add("better-ext-alt-container");
+  alternatives.map((alternative) => {
+    scrollableAltContainer.innerHTML += fillTemplate(altTemplate, alternative);
+  });
+  nonRecommendedAlts.appendChild(scrollableAltContainer);
+  return nonRecommendedAlts;
 }
 
 function createRecommendedAlt(recommendedAlternative) {
