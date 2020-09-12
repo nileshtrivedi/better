@@ -1,39 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <style>
-body {
-    margin: 40px auto;
-    max-width:650px;
-    line-height:1.6;
-    font-size:18px;
-    color:#444;
-    padding:0 10px
-}
-h1,h2,h3 {
-    line-height:1.2
-}
 
-input[type=url] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-}
+<head>
+  <style>
+    body {
+      margin: 40px auto;
+      max-width: 650px;
+      line-height: 1.6;
+      font-size: 18px;
+      color: #444;
+      padding: 0 10px
+    }
 
-button {
-    padding: 5px 5px;
-    font-size: 16px;
-}
-    </style>
-  </head>
-  <body>
-    <div>
-      <h3>Choose a different source of suggestions!</h3>
-      <!-- TODO: Fetch the current option value and set in URL field below -->
-      <input id="betterSourceText" type="url" placeholder="https://cdn.jsdelivr.net/gh/nileshtrivedi/better/defaultlist.json" />
-      <button id="betterSourceSubmit" value="Save">Save</button>
+    h1,
+    h2,
+    h3 {
+      line-height: 1.2
+    }
+
+    input[type=url] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+
+    button {
+      padding: 5px 5px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h3>Choose a different source of suggestions!</h3>
+    <!-- TODO: Fetch the current option value and set in URL field below -->
+    <div id="betterSourceInputContainer">
     </div>
-  </body>
-  <script src="options.js"></script>
+    <button id="addSourceButton">Add a new source +</button>
+
+    <button id="betterSourceSubmit" value="Save">Save</button>
+  </div>
+  <p><small>To delete a source: empty the field, hit save, and refresh the page.</small></p>
+</body>
+<script src="options.js"></script>
+
 </html>

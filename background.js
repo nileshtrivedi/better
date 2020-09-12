@@ -1,4 +1,4 @@
-var DEFAULT_LIST_URL =
+let DEFAULT_LIST_URL =
   "https://cdn.jsdelivr.net/gh/nileshtrivedi/better/defaultlist.json";
 var BETTER_ALTERNATIVES = [];
 
@@ -14,14 +14,14 @@ chrome.runtime.onStartup.addListener(() => {
 });
 
 function fetchAllLists(listUrls) {
-  var promises = listUrls.map((listUrl) =>
-    fetch(listUrl)
-      .then((resp) => resp.json())
-      .catch((e) => console.log("List errored out", e))
+  var promises = listUrls.map(
+    (listUrl) => fetch(listUrl).then((resp) => resp.json())
+    // .catch((e) => console.log("List errored out", e))
   );
 
-  Promise.all(promises).then((results) => {
-    BETTER_ALTERNATIVES = results;
+  // wait for all requests to complete, ignore errors
+  Promise.all(promises.map((p) => p.catch((e) => null))).then((results) => {
+    BETTER_ALTERNATIVES = results.filter((item) => item != null);
     chrome.storage.local.set({ betterSourceData: results }, function () {
       console.log("Set betterSource");
     });
@@ -29,11 +29,15 @@ function fetchAllLists(listUrls) {
 }
 
 function onStartup() {
-  chrome.storage.sync.get(["betterSourceURL"], function (result) {
-    var listUrl = result.betterSourceURL || DEFAULT_LIST_URL;
-    // Uncomment this when testing list changes locally
-    // listUrl = "/defaultlist.json";
-    fetchAllLists([listUrl, "/lists/t1.json", "/lists/t2.json"]);
+  chrome.storage.sync.get(["betterSourceUrls"], function (result) {
+    let betterSourceUrls = [];
+    if (result && result.betterSourceUrls) {
+      betterSourceUrls = JSON.parse(result.betterSourceUrls);
+    }
+    if (betterSourceUrls.length === 0) {
+      betterSourceUrls = [DEFAULT_LIST_URL];
+    }
+    fetchAllLists(betterSourceUrls);
   });
 }
 
