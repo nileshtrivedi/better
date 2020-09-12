@@ -27,5 +27,5 @@
     "page": "options.html",
     "open_in_tab": false
   },
-  "web_accessible_resources": ["defaultlist.json"]
+  "web_accessible_resources": ["defaultlist.json", "lists/*"]
 }

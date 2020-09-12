@@ -1,0 +1,12 @@
+[
+	{
+		"urlPattern": "https://(www.)?miteshshah.com",
+		"alternatives": [
+			{
+				"url": "https://computableverse.com",
+				"name": "Miteshs Blog",
+				"desc": "My another tech blog"
+			}
+		]
+	}
+]

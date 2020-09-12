@@ -1,54 +1,74 @@
-var DEFAULT_LIST_URL = 'https://cdn.jsdelivr.net/gh/nileshtrivedi/better/defaultlist.json'
+var DEFAULT_LIST_URL =
+  "https://cdn.jsdelivr.net/gh/nileshtrivedi/better/defaultlist.json";
 var BETTER_ALTERNATIVES = [];
 
-chrome.runtime.onInstalled.addListener(function() {
-  console.log('onInstalled....');
+chrome.runtime.onInstalled.addListener(function () {
+  console.log("onInstalled....");
   onStartup();
 });
 
 // fetch and save data when chrome restarted
 chrome.runtime.onStartup.addListener(() => {
-  console.log('onStartup....');
+  console.log("onStartup....");
   onStartup();
 });
 
+function fetchAllLists(listUrls) {
+  var promises = listUrls.map((listUrl) =>
+    fetch(listUrl)
+      .then((resp) => resp.json())
+      .catch((e) => console.log("List errored out", e))
+  );
 
-function onStartup(){
-    chrome.storage.sync.get(['betterSourceURL'], function(result) {
-        console.log('Value currently is ' + (result.betterSourceURL || DEFAULT_LIST_URL));
-
-        var listUrl = result.betterSourceURL || DEFAULT_LIST_URL
-        // Uncomment this when testing list changes locally
-        listUrl = "/defaultlist.json"
-        fetch(listUrl)
-        .then(response => response.json())
-        .then(data => {
-            console.log("Got data: ", data);
-            BETTER_ALTERNATIVES = data;
-            chrome.storage.local.set({betterSourceData: data}, function() {
-              console.log('Set betterSource = ' + data);
-            })
-        });
+  Promise.all(promises).then((results) => {
+    BETTER_ALTERNATIVES = results;
+    chrome.storage.local.set({ betterSourceData: results }, function () {
+      console.log("Set betterSource");
     });
+  });
 }
 
-function getMatch(url){
-  var match = BETTER_ALTERNATIVES.find(pattern => url.match(new RegExp(pattern.urlPattern)));
-  if(match && match.alternatives)
-      return match;
-  else return null;
+function onStartup() {
+  chrome.storage.sync.get(["betterSourceURL"], function (result) {
+    var listUrl = result.betterSourceURL || DEFAULT_LIST_URL;
+    // Uncomment this when testing list changes locally
+    // listUrl = "/defaultlist.json";
+    fetchAllLists([listUrl, "/lists/t1.json", "/lists/t2.json"]);
+  });
+}
+
+function getMatch(url) {
+  var matches = BETTER_ALTERNATIVES.reduce((result, sourceList) => {
+    var match = sourceList.find((pattern) =>
+      url.match(new RegExp(pattern.urlPattern))
+    );
+    if (match && match.alternatives) result.push(match);
+    return result;
+  }, []);
+
+  if (matches.length) {
+    var combinedMatch = {
+      urlPattern: matches[0].urlPattern,
+      alternatives: matches.reduce(
+        (result, match) => result.concat(match.alternatives),
+        []
+      ),
+    };
+    return combinedMatch;
+  }
+  return null;
 }
 
 chrome.runtime.onMessage.addListener((msg, sender, response) => {
   switch (msg.type) {
-      case 'getMatch':
-          response(getMatch(msg.url));
-          break;
-      case 'reloadList':
-          onStartup();
-          break;
-      default:
-          response('unknown request');
-          break;
+    case "getMatch":
+      response(getMatch(msg.url));
+      break;
+    case "reloadList":
+      onStartup();
+      break;
+    default:
+      response("unknown request");
+      break;
   }
 });

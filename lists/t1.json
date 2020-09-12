@@ -1,0 +1,12 @@
+[
+	{
+		"urlPattern": "https://(www.)?miteshshah.com",
+		"alternatives": [
+			{
+				"url": "https://oxal.org",
+				"name": "Mitesh",
+				"desc": "My other website"
+			}
+		]
+	}
+]
