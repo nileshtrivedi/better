@@ -28,10 +28,16 @@ const altTemplate = "\
 function createNonRecommendedAlts(alternatives) {
     let nonRecommendedAlts = document.createElement("div");
     nonRecommendedAlts.setAttribute("style", "text-align: left;");
-    nonRecommendedAlts.innerHTML = "<p style='font-size: 12px; text-align: center; margin-bottom: 4px;'>MORE ALTERNATIVES</p>";
-    alternatives.map(alternative => {
-      nonRecommendedAlts.innerHTML += fillTemplate(altTemplate, alternative);
-    })
+    let alternativesHeading = document.createElement("p");
+    alternativesHeading.setAttribute("style", "font-size: 12px; text-align: center; margin: 4px 0;");
+    alternativesHeading.innerText = "MORE ALTERNATIVES";
+    nonRecommendedAlts.appendChild(alternativesHeading);
+    let scrollableAltContainer = document.createElement("div");
+    scrollableAltContainer.setAttribute("style", "max-height: 300px; overflow: scroll");
+    alternatives.map((alternative) => {
+      scrollableAltContainer.innerHTML += fillTemplate(altTemplate, alternative);
+    });
+    nonRecommendedAlts.appendChild(scrollableAltContainer);
     return nonRecommendedAlts;
 }
 
