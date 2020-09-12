@@ -25,6 +25,37 @@ const altTemplate = "\
   <p style='margin: 0; font-size: 12px;'>${this.desc}</p> \
 </a>"
 
+const CONTAINER_STYLES = `
+    .better-ext-container * {
+        all: unset;
+    }
+
+    .better-ext-container h1,  .better-ext-container p, .better-ext-container div {
+        display:block;
+    }
+
+    .better-ext-container {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",  Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 20px; 
+        line-height:1;
+        background-color: #ffcc49; 
+        position: fixed; 
+        bottom: 10px; 
+        right: 10px; 
+        width: 300px; 
+        box-shadow: 0px 10px 30px #222222; 
+        padding: 12px; 
+        text-align: center; 
+        z-index: 20000;
+    }
+`;
+
+function addPagePopupStyles() {
+  let styleTag = document.createElement("style");
+  styleTag.innerHTML = CONTAINER_STYLES;
+  document.head.append(styleTag);
+}
+
 function createNonRecommendedAlts(alternatives) {
     let nonRecommendedAlts = document.createElement("div");
     nonRecommendedAlts.setAttribute("style", "text-align: left;");
@@ -50,7 +81,10 @@ function createRecommendedAlt(recommendedAlternative) {
 
     let alternativeText = document.createElement("p");
     alternativeText.textContent = recommendedAlternative.desc;
-    alternativeText.setAttribute("style", "font-size: 20px; color: #222222; font-weight: bold; margin-top: 24px; line-height:1;");
+    alternativeText.setAttribute(
+      "style",
+      "font-size: 20px; color: #222222; font-weight: bold; margin: 20px 0; line-height:1;"
+    );
 
     let alternativeCTA = document.createElement("a");
     alternativeCTA.textContent = recommendedAlternative.name;
@@ -67,14 +101,10 @@ function createRecommendedAlt(recommendedAlternative) {
 
 function showBetter(match) {
     if(!match || !match.alternatives) return;
+    addPagePopupStyles();
     let alternatives = match.alternatives;
-
     let betterdiv = document.createElement("div");
-    betterdiv.setAttribute("style",
-                           "background-color: #ffcc49; position: fixed; bottom: 10px; right: 10px; width: 300px; \
-                            box-shadow: 0px 10px 30px #222222; padding: 12px; text-align: center; font-size: 20px; \
-                            z-index: 20000;")
-
+    betterdiv.classList.add("better-ext-container");
     betterdiv.appendChild(createRecommendedAlt(alternatives[0]));
 
     if(alternatives.length > 1) {
