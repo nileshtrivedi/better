@@ -29,6 +29,10 @@ You can load this extension directly in Chrome or Firefox Developer Edition (aft
 To submit to the stores, build a zip with: `zip -r -X archive.zip ./*`
 Before creating the zip, make sure to uncomment the local reference to `listUrl` in `onStartup()` and for Chrome store, remove `browser_specific_settings` from `manifest.json`
 
+# Demo Video
+
+You can view the demo video here: https://oxal.org/better.mp4
+
 # Contribute
 
 Check one of the unassigned issues and start a discussion or send a pull request.
