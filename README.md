@@ -33,7 +33,7 @@ Before creating the zip for the Chrome store, remove `browser_specific_settings`
 
 You can view 2 demo videos here:
 
-- https://oxal.org/better-demo.mp4
+- https://oxal.org/better-demo.mp4 ([YouTube Link](https://youtu.be/PcBA3SnY67s))
 - https://oxal.org/better-2.mov
 
 # Contribute
