@@ -31,9 +31,9 @@ Before creating the zip, make sure to uncomment the local reference to `listUrl`
 
 # Demo Video
 
-You can view 2 demo videos here: 
+You can view 2 demo videos here:
 
-- https://oxal.org/better.mp4
+- https://oxal.org/better-demo.mp4
 - https://oxal.org/better-2.mov
 
 # Contribute
