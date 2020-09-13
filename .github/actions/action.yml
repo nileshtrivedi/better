@@ -1,0 +1,5 @@
+name: "Better Suggestions"
+description: "A GitHub action to allow users to suggest changes alternative."
+runs:
+    using: 'node12'
+    main: 'index.js'

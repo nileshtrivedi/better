@@ -1,0 +1,25 @@
+name: Issues Workflow
+
+# Controls when the action will run.
+on:
+  issues:
+    types: [opened]
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    env: 
+      gh_context: ${{ toJson(github) }}
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - uses: actions/checkout@v2
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: ./.github/actions/action
+      - uses: peter-evans/create-pull-request@v3
+        name: Create Pull Request
+        with:
+          branch-suffix: random
+          labels: "Default List Suggestion"
