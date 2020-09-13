@@ -1,552 +1,557 @@
 [
-	{
-		"urlPattern": "https://(www.)?google.com/maps",
-		"alternatives": [
-			{
-				"url": "https://www.openstreetmap.org",
-				"name": "OpenStreetMap",
-				"desc": "Created by people like you and free to use under an open license."
-			}
-		]
-	},
-	{
-		"urlPattern": "https://(www.)?google.com/chrome",
-		"alternatives": [
-			{
-				"url": "https://mozilla.org/firefox",
-				"name": "Mozilla Firefox",
-				"desc": "Firefox is an open source browser, backed by the Mozilla Foundation."
-			},
-			{
-				"url": "https://brave.com",
-				"name": "Brave Browser",
-				"desc": "Brave is an open source, new-generation browser."
-			},
-			{
-				"url": "https://torproject.org",
-				"name": "Tor Browser",
-				"desc": "Tor Browser is a modified version of Firefox, which protects your privacy by connecting to the Tor network."
-			}
-		]
-	},
-	{
-		"urlPattern": "https?://(www.)?slack.com",
-		"alternatives": [
-			{
-				"url": "https://matrix.org",
-				"name": "Matrix / Element",
-				"desc": "An open network for secure, decentralized communication."
-			}
-		]
-	},
-	{
-		"urlPattern": "https://twitter.com/i/flow/signup",
-		"alternatives": [
-			{
-				"url": "https://joinmastodon.org",
-				"name": "Mastodon",
-				"desc": "Mastodon is the most popular email-like decentralized social network."
-			},
-			{
-				"url": "https://friendi.ca",
-				"name": "Friendica",
-				"desc": "Friendica is a Facebook-style social network."
-			}
-		]
-	},
-	{
-		"urlPattern": "https://(www.)?amazon.(com|in)/[\\w\\-]*/?dp/\\w+",
-		"alternatives": [
-			{
-				"url": "https://betterworldbooks.com",
-				"name": "Better World Books",
-				"desc": "Better World Books is an online bookshop, which donates one book to charity for every book it sells."
-			},
-			{
-				"url": "https://hive.co.uk",
-				"name": "Hive",
-				"desc": "Hive is a wholesaler-run site, which lets you order books online."
-			},
-			{
-				"url": "https://switching.software/tools/kobo-search",
-				"name": "Kobo",
-				"desc": "Kobo is a global eBook seller, and the most comprehensive alternative to Kindle."
-			},
-			{
-				"url": "https://switching.software/tools/ebook-search",
-				"name": "Public Domain eBooks",
-				"desc": "This tool allows searching for classic eBooks that are in the public domain."
-			},
-			{
-				"url": "https://openlibrary.org",
-				"name": "Open Library",
-				"desc": "Open Library is a Goodreads-style site for borrowing and downloading eBooks."
-			},
-			{
-				"url": "https://libreture.com",
-				"name": "Libreture",
-				"desc": "Libreture is a Goodreads-style site, which lets you store and organise your DRM-free eBooks online."
-			},
-			{
-				"url": "https://inventaire.io",
-				"name": "Inventaire",
-				"desc": "Inventaire is a libre volunteer-run book lending site."
-			},
-			{
-				"url": "https://calibre-ebook.com",
-				"name": "Calibre",
-				"desc": "Calibre is a well-established and popular libre app, which lets you organise your eBook collection."
-			}
-		]
-	},
-	{
-		"urlPattern": "https://(www.)?facebook.com",
-		"alternatives": [
-			{
-				"url": "https://joinmastodon.org",
-				"name": "Mastodon",
-				"desc": "Mastodon is the most popular email-like decentralized social network."
-			},
-			{
-				"url": "https://friendi.ca",
-				"name": "Friendica",
-				"desc": "Friendica is a Facebook-style social network."
-			}
-		]
-	},
-	{
-		"urlPattern": "https://(www.)?youtube.com",
-		"alternatives": [
-			{
-				"url": "https://joinpeertube.org",
-				"name": "PeerTube",
-				"desc": "PeerTube is an open source federated alternative to YouTube."
-			}
-		]
-	},
-	{
-		"urlPattern": "https://(www.)?goodreads.com",
-		"alternatives": [
-			{
-				"url": "https://openlibrary.org",
-				"name": "OpenLibrary",
-				"desc": "Internet Archive is building OpenLibrary as a better alternative to GoodReads"
-			}
-		]
-	},
-	{
-		"urlPattern": "https://(www.)?gmail.com",
-		"alternatives": [
-			{
-				"url": "https://tutanota.com",
-				"name": "Tutanota",
-				"desc": "Tutanota is an encrypted email and calendar service, based in Germany."
-			},
-			{
-				"url": "https://protonmail.com",
-				"name": "ProtonMail",
-				"desc": "ProtonMail is a Swiss-based email service, with no advertising and maximum possible privacy for its users."
-			},
-			{
-				"url": "https://posteo.de",
-				"name": "Posteo",
-				"desc": "Posteo is an email service, with no advertising."
-			},
-			{
-				"url": "https://fastmail.com",
-				"name": "Fastmail",
-				"desc": "Fastmail is an Australian company that offers private email, funded entirely by its users."
-			},
-			{
-				"url": "https://soverin.net",
-				"name": "Soverin",
-				"desc": "Soverin hosts privacy-oriented email and website, based in the Netherlands."
-			},
-			{
-				"url": "https://thexyz.com",
-				"name": "Thexyz",
-				"desc": "Thexyz is a Canadian company, offering privacy-conscious business email."
-			},
-			{
-				"url": "https://kolabnow.com",
-				"name": "Kolab Now",
-				"desc": "Kolab Now is a Swiss email provider with lots of extra services, aimed at business people."
-			},
-			{
-				"url": "https://mailbox.org",
-				"name": "mailbox.org",
-				"desc": "Run by a German family business, mailbox.org offers email, online file storage and online office features."
-			}
-		]
-	},
-	{
-		"urlPattern": "https://(\\w+.)?medium.com",
-		"alternatives": [
-			{
-				"url": "https://writefreely.org",
-				"name": "Write Freely",
-				"desc": "Write Freely is a blogging service, like Medium, where the focus is on the text itself, with a clean uncluttered aesthetic."
-			},
-			{
-				"url": "https://joinplu.me",
-				"name": "Plume",
-				"desc": "Plume is an open source federated blogging platform, which lets you create a federated blog."
-			},
-			{
-				"url": "https://wordpress.org",
-				"name": "WordPress",
-				"desc": "WordPress is an open source software you can use to create a beautiful website, blog, or an app."
-			}
-		]
-	},
-	{
-		"urlPattern": "https://(www.)?meetup.com",
-		"alternatives": [
-			{
-				"url": "https://gettogether.community",
-				"name": "GetTogether",
-				"desc": "GetTogether is a free open source event management site."
-			}
-		]
-	},
-	{
-		"urlPattern": "https?://(www.)?google.co(m|.in)",
-		"alternatives": [
-			{
-				"url": "https://searx.neocities.org",
-				"name": "searx",
-				"desc": "Searx is an open source “metasearch” engine."
-			},
-			{
-				"url": "https://mojeek.com",
-				"name": "Mojeek",
-				"desc": "Mojeek is a web search engine based in the United Kingdom."
-			},
-			{
-				"url": "https://qwant.com",
-				"name": "Qwant",
-				"desc": "Qwant is a search engine based in Europe, which doesn’t track users or personalise results."
-			},
-			{
-				"url": "https://duckduckgo.com",
-				"name": "DuckDuckGo",
-				"desc": "DuckDuckGo is the most popular and easiest to use privacy-conscious search engine."
-			}
-		]
-	},
-	{
-		"urlPattern": "https?://(www.)?adobe.com",
-		"alternatives": [
-			{
-				"url": "https://web.archive.org/web/https://switching.software/replace/adobe-creative-cloud",
-				"name": "Explore",
-				"desc": "switching.software recommends a few alternatives to Adobe's Service as a Software Substitute."
-			}
-		]
-	},
-	{
-		"urlPattern": "https?://(www.)?audible.com",
-		"alternatives": [
-			{
-				"url": "https://librivox.org",
-				"name": "LibriVox",
-				"desc": "LibriVox is a DRM-free collection of audiobooks that are provided at no charge."
-			},
-			{
-				"url": "https://libro.fm",
-				"name": "Libro.fm",
-				"desc": "Libro.fm offers DRM-free audiobooks, while also supporting local bookstores."
-			}
-		]
-	},
-	{
-		"urlPattern": "https?://(www.)?messenger.com",
-		"alternatives": [
-			{
-				"url": "https://signal.org",
-				"name": "Signal",
-				"desc": "Signal is a popular private messaging, voice call, and video call service."
-			},
-			{
-				"url": "https://xmpp.org",
-				"name": "XMPP",
-				"desc": "XMPP is a widely-used free and open internet messaging standard."
-			},
-			{
-				"url": "https://quicksy.im",
-				"name": "Quicksy",
-				"desc": "Quicksy is an easy-to-use chat app."
-			},
-			{
-				"url": "https://zom.im/zomenglish.html",
-				"name": "Zom",
-				"desc": "Zom is an extremely easy to use and free open source messenger app."
-			},
-			{
-				"url": "https://matrix.org",
-				"name": "Matrix / Element",
-				"desc": "An open network for secure, decentralized communication."
-			},
-			{
-				"url": "https://jami.net",
-				"name": "Jami",
-				"desc": "Jami is a libre, easy-to-use alternative to Skype, with voice call, video call, and messaging."
-			}
-		]
-	},
-	{
-		"urlPattern": "https://(www.)?google.com/analytics",
-		"alternatives": [
-			{
-				"url": "https://matomo.org",
-				"name": "Matomo",
-				"desc": "Matomo Analytics lets sites keep their visitor data private without sharing it with anyone else."
-			},
-			{
-				"url": "https://plausible.io",
-				"name": "Plausible Analytics",
-				"desc": "Plausible is a very simple and privacy-friendly analytics software."
-			},
-			{
-				"url": "https://goatcounter.com",
-				"name": "GoatCounter",
-				"desc": "GoatCounter is an open source web analytics platform available as a hosted service or self-hosted app."
-			}
-		]
-	},
-	{
-		"urlPattern": "https://(www.)?google.com/calendar",
-		"alternatives": [
-			{
-				"url": "https://nextcloud.com",
-				"name": "Nextcloud",
-				"desc": "Nextcloud is an easy-to-use service that provides a range of optional add-ons, such as calendars."
-			},
-			{
-				"url": "https://tutanota.com",
-				"name": "Tutanota",
-				"desc": "Tutanota is an encrypted email and calendar service, based in Germany."
-			},
-			{
-				"url": "https://kolabnow.com",
-				"name": "Kolab Now",
-				"desc": "Kolab Now is a Swiss email provider with lots of extra services, aimed at business people, including a calendar."
-			},
-			{
-				"url": "https://etesync.com",
-				"name": "EteSync",
-				"desc": "EteSync is an open-source end-to-end encrypted sync tool for your calendars."
-			}
-		]
-	},
-	{
-		"urlPattern": "https://(www.)?google.com/drive",
-		"alternatives": [
-			{
-				"url": "https://nextcloud.com",
-				"name": "Nextcloud",
-				"desc": "Nextcloud is an easy-to-use service that provides a range of optional add-ons."
-			},
-			{
-				"url": "https://cryptpad.fr",
-				"name": "CryptPad",
-				"desc": "CryptPad is a collection of open source and privacy-friendly collaboration tools."
-			},
-			{
-				"url": "https://etherpad.org",
-				"name": "Etherpad",
-				"desc": "Etherpad is an online text editor that can be used collaboratively."
-			},
-			{
-				"url": "https://syncthing.net",
-				"name": "Syncthing",
-				"desc": "Syncthing is a program to easily synchronize folders across two or more computers."
-			}
-		]
-	},
-	{
-		"urlPattern": "https://(www.)?google.com/docs",
-		"alternatives": [
-			{
-				"url": "https://nextcloud.com",
-				"name": "Nextcloud",
-				"desc": "Nextcloud is an easy-to-use service that provides a range of optional add-ons."
-			},
-			{
-				"url": "https://cryptpad.fr",
-				"name": "CryptPad",
-				"desc": "CryptPad is a collection of open source and privacy-friendly collaboration tools."
-			},
-			{
-				"url": "https://etherpad.org",
-				"name": "Etherpad",
-				"desc": "Etherpad is an online text editor that can be used collaboratively."
-			},
-			{
-				"url": "https://syncthing.net",
-				"name": "Syncthing",
-				"desc": "Syncthing is a program to easily synchronize folders across two or more computers."
-			}
-		]
-	},
-	{
-		"urlPattern": "https://(www.)?google.com/forms",
-		"alternatives": [
-			{
-				"url": "https://limesurvey.org",
-				"name": "LimeSurvey",
-				"desc": "LimeSurvey is a free and open source survey software."
-			},
-			{
-				"url": "https://apps.nextcloud.com/apps/forms",
-				"name": "Nextcloud Forms",
-				"desc": "Nextcloud Forms is an extension to Nextcloud, which allows for creating simple surveys and questionnaires."
-			},
-			{
-				"url": "https://webform.com",
-				"name": "Webform",
-				"desc": "Webform is a free and open source form software."
-			}
-		]
-	},
-	{
-		"urlPattern": "https://hangouts.google.com",
-		"alternatives": [
-			{
-				"url": "https://jami.net",
-				"name": "Jami",
-				"desc": "Jami is a libre, easy-to-use alternative to Skype, with voice call, video call, and messaging."
-			},
-			{
-				"url": "https://jitsi.org/jitsi-meet",
-				"name": "Jitsi Meet",
-				"desc": "Jitsi Meet is a free and open source video chat app made by volunteers."
-			},
-			{
-				"url": "https://bigbluebutton.org",
-				"name": "BigBlueButton",
-				"desc": "BigBlueButton is a professional video conferencing tool, focused on online teaching and presenting."
-			}
-		]
-	},
-	{
-		"urlPattern": "https://keep.google.com",
-		"alternatives": [
-			{
-				"url": "https://standardnotes.org",
-				"name": "Standard Notes",
-				"desc": "Standard Notes is a free and open source notes app, focusing on simplicity."
-			},
-			{
-				"url": "https://joplinapp.org",
-				"name": "Joplin",
-				"desc": "Joplin is a libre note taking and to-do app."
-			},
-			{
-				"url": "https://apps.nextcloud.com/apps/notes",
-				"name": "Nextcloud Notes",
-				"desc": "Nextcloud Notes is an extension to Nextcloud, which allows for organizing your notes."
-			}
-		]
-	},
-	{
-		"urlPattern": "https://maps.google.com",
-		"alternatives": [
-			{
-				"url": "https://openstreetmap.org",
-				"name": "OpenStreetMap",
-				"desc": "OpenStreetMap is a huge user-made map site that anyone can use and edit."
-			},
-			{
-				"url": "https://qwant.com/maps",
-				"name": "Qwant Maps",
-				"desc": "Qwant Maps is a Google Maps replacement built upon OpenStreetMap."
-			}
-		]
-	},
-	{
-		"urlPattern": "https://play.google.com",
-		"alternatives": [
-			{
-				"url": "https://f-droid.org",
-				"name": "F-Droid",
-				"desc": "F-Droid is an open source alternative app store."
-			}
-		]
-	},
-	{
-		"urlPattern": "https://(www.)?instagram.com",
-		"alternatives": [
-			{
-				"url": "https://pixelfed.org",
-				"name": "Pixelfed",
-				"desc": "Pixelfed is a photo-oriented social network with filters, comments, likes, shares."
-			}
-		]
-	},
-	{
-		"urlPattern": "https://(www.)?minecraft.net",
-		"alternatives": [
-			{
-				"url": "https://minetest.net",
-				"name": "Minetest",
-				"desc": "Minetest is a free and open source Minecraft-style game with huge worlds."
-			}
-		]
-	},
-	{
-		"urlPattern": "https://(www.)?skype.com",
-		"alternatives": [
-			{
-				"url": "https://jami.net",
-				"name": "Jami",
-				"desc": "Jami is a libre, easy-to-use alternative to Skype, with voice call, video call, and messaging."
-			},
-			{
-				"url": "https://jitsi.org/jitsi-meet",
-				"name": "Jitsi Meet",
-				"desc": "Jitsi Meet is a free and open source video chat app made by volunteers."
-			},
-			{
-				"url": "https://bigbluebutton.org",
-				"name": "BigBlueButton",
-				"desc": "BigBlueButton is a professional video conferencing tool, focused on online teaching and presenting."
-			}
-		]
-	},
-	{
-		"urlPattern": "https?://(www.)?whatsapp.com",
-		"alternatives": [
-			{
-				"url": "https://signal.org",
-				"name": "Signal",
-				"desc": "Signal is a popular private messaging, voice call, and video call service."
-			},
-			{
-				"url": "https://xmpp.org",
-				"name": "XMPP",
-				"desc": "XMPP is a widely-used free and open internet messaging standard."
-			},
-			{
-				"url": "https://quicksy.im",
-				"name": "Quicksy",
-				"desc": "Quicksy is an easy-to-use chat app."
-			},
-			{
-				"url": "https://zom.im/zomenglish.html",
-				"name": "Zom",
-				"desc": "Zom is an extremely easy to use and free open source messenger app."
-			},
-			{
-				"url": "https://matrix.org",
-				"name": "Matrix / Element",
-				"desc": "An open network for secure, decentralized communication."
-			},
-			{
-				"url": "https://jami.net",
-				"name": "Jami",
-				"desc": "Jami is a libre, easy-to-use alternative to Skype, with voice call, video call, and messaging."
-			}
-		]
-	}
+    {
+        "urlPattern": "https://(www.)?google.com/maps",
+        "alternatives": [
+            {
+                "url": "https://www.openstreetmap.org",
+                "name": "OpenStreetMap",
+                "desc": "Created by people like you and free to use under an open license."
+            }
+        ]
+    },
+    {
+        "urlPattern": "https://(www.)?google.com/chrome",
+        "alternatives": [
+            {
+                "url": "https://mozilla.org/firefox",
+                "name": "Mozilla Firefox",
+                "desc": "Firefox is an open source browser, backed by the Mozilla Foundation."
+            },
+            {
+                "url": "https://brave.com",
+                "name": "Brave Browser",
+                "desc": "Brave is an open source, new-generation browser."
+            },
+            {
+                "url": "https://torproject.org",
+                "name": "Tor Browser",
+                "desc": "Tor Browser is a modified version of Firefox, which protects your privacy by connecting to the Tor network."
+            }
+        ]
+    },
+    {
+        "urlPattern": "https?://(www.)?slack.com",
+        "alternatives": [
+            {
+                "url": "https://matrix.org",
+                "name": "Matrix / Element",
+                "desc": "An open network for secure, decentralized communication."
+            }
+        ]
+    },
+    {
+        "urlPattern": "https://twitter.com/i/flow/signup",
+        "alternatives": [
+            {
+                "url": "https://joinmastodon.org",
+                "name": "Mastodon",
+                "desc": "Mastodon is the most popular email-like decentralized social network."
+            },
+            {
+                "url": "https://friendi.ca",
+                "name": "Friendica",
+                "desc": "Friendica is a Facebook-style social network."
+            }
+        ]
+    },
+    {
+        "urlPattern": "https://(www.)?amazon.(com|in)/[\\w\\-]*/?dp/\\w+",
+        "alternatives": [
+            {
+                "url": "https://betterworldbooks.com",
+                "name": "Better World Books",
+                "desc": "Better World Books is an online bookshop, which donates one book to charity for every book it sells."
+            },
+            {
+                "url": "https://hive.co.uk",
+                "name": "Hive",
+                "desc": "Hive is a wholesaler-run site, which lets you order books online."
+            },
+            {
+                "url": "https://switching.software/tools/kobo-search",
+                "name": "Kobo",
+                "desc": "Kobo is a global eBook seller, and the most comprehensive alternative to Kindle."
+            },
+            {
+                "url": "https://switching.software/tools/ebook-search",
+                "name": "Public Domain eBooks",
+                "desc": "This tool allows searching for classic eBooks that are in the public domain."
+            },
+            {
+                "url": "https://openlibrary.org",
+                "name": "Open Library",
+                "desc": "Open Library is a Goodreads-style site for borrowing and downloading eBooks."
+            },
+            {
+                "url": "https://libreture.com",
+                "name": "Libreture",
+                "desc": "Libreture is a Goodreads-style site, which lets you store and organise your DRM-free eBooks online."
+            },
+            {
+                "url": "https://inventaire.io",
+                "name": "Inventaire",
+                "desc": "Inventaire is a libre volunteer-run book lending site."
+            },
+            {
+                "url": "https://calibre-ebook.com",
+                "name": "Calibre",
+                "desc": "Calibre is a well-established and popular libre app, which lets you organise your eBook collection."
+            }
+        ]
+    },
+    {
+        "urlPattern": "https://(www.)?facebook.com",
+        "alternatives": [
+            {
+                "url": "https://joinmastodon.org",
+                "name": "Mastodon",
+                "desc": "Mastodon is the most popular email-like decentralized social network."
+            },
+            {
+                "url": "https://friendi.ca",
+                "name": "Friendica",
+                "desc": "Friendica is a Facebook-style social network."
+            }
+        ]
+    },
+    {
+        "urlPattern": "https://(www.)?youtube.com",
+        "alternatives": [
+            {
+                "url": "https://joinpeertube.org",
+                "name": "PeerTube",
+                "desc": "PeerTube is an open source federated alternative to YouTube."
+            }
+        ]
+    },
+    {
+        "urlPattern": "https://(www.)?goodreads.com",
+        "alternatives": [
+            {
+                "url": "https://openlibrary.org",
+                "name": "OpenLibrary",
+                "desc": "Internet Archive is building OpenLibrary as a better alternative to GoodReads"
+            }
+        ]
+    },
+    {
+        "urlPattern": "https://(www.)?gmail.com",
+        "alternatives": [
+            {
+                "url": "https://tutanota.com",
+                "name": "Tutanota",
+                "desc": "Tutanota is an encrypted email and calendar service, based in Germany."
+            },
+            {
+                "url": "https://protonmail.com",
+                "name": "ProtonMail",
+                "desc": "ProtonMail is a Swiss-based email service, with no advertising and maximum possible privacy for its users."
+            },
+            {
+                "url": "https://posteo.de",
+                "name": "Posteo",
+                "desc": "Posteo is an email service, with no advertising."
+            },
+            {
+                "url": "https://fastmail.com",
+                "name": "Fastmail",
+                "desc": "Fastmail is an Australian company that offers private email, funded entirely by its users."
+            },
+            {
+                "url": "https://soverin.net",
+                "name": "Soverin",
+                "desc": "Soverin hosts privacy-oriented email and website, based in the Netherlands."
+            },
+            {
+                "url": "https://thexyz.com",
+                "name": "Thexyz",
+                "desc": "Thexyz is a Canadian company, offering privacy-conscious business email."
+            },
+            {
+                "url": "https://kolabnow.com",
+                "name": "Kolab Now",
+                "desc": "Kolab Now is a Swiss email provider with lots of extra services, aimed at business people."
+            },
+            {
+                "url": "https://mailbox.org",
+                "name": "mailbox.org",
+                "desc": "Run by a German family business, mailbox.org offers email, online file storage and online office features."
+            }
+        ]
+    },
+    {
+        "urlPattern": "https://(\\w+.)?medium.com",
+        "alternatives": [
+            {
+                "url": "https://writefreely.org",
+                "name": "Write Freely",
+                "desc": "Write Freely is a blogging service, like Medium, where the focus is on the text itself, with a clean uncluttered aesthetic."
+            },
+            {
+                "url": "https://joinplu.me",
+                "name": "Plume",
+                "desc": "Plume is an open source federated blogging platform, which lets you create a federated blog."
+            },
+            {
+                "url": "https://wordpress.org",
+                "name": "WordPress",
+                "desc": "WordPress is an open source software you can use to create a beautiful website, blog, or an app."
+            }
+        ]
+    },
+    {
+        "urlPattern": "https://(www.)?meetup.com",
+        "alternatives": [
+            {
+                "url": "https://gettogether.community",
+                "name": "GetTogether",
+                "desc": "GetTogether is a free open source event management site."
+            },
+            {
+                "url": "https://opensports.org",
+                "name": "Open Sports",
+                "desc": "Sports alternative for Meetup.com"
+            }
+        ]
+    },
+    {
+        "urlPattern": "https?://(www.)?google.co(m|.in)",
+        "alternatives": [
+            {
+                "url": "https://searx.neocities.org",
+                "name": "searx",
+                "desc": "Searx is an open source “metasearch” engine."
+            },
+            {
+                "url": "https://mojeek.com",
+                "name": "Mojeek",
+                "desc": "Mojeek is a web search engine based in the United Kingdom."
+            },
+            {
+                "url": "https://qwant.com",
+                "name": "Qwant",
+                "desc": "Qwant is a search engine based in Europe, which doesn’t track users or personalise results."
+            },
+            {
+                "url": "https://duckduckgo.com",
+                "name": "DuckDuckGo",
+                "desc": "DuckDuckGo is the most popular and easiest to use privacy-conscious search engine."
+            }
+        ]
+    },
+    {
+        "urlPattern": "https?://(www.)?adobe.com",
+        "alternatives": [
+            {
+                "url": "https://web.archive.org/web/https://switching.software/replace/adobe-creative-cloud",
+                "name": "Explore",
+                "desc": "switching.software recommends a few alternatives to Adobe's Service as a Software Substitute."
+            }
+        ]
+    },
+    {
+        "urlPattern": "https?://(www.)?audible.com",
+        "alternatives": [
+            {
+                "url": "https://librivox.org",
+                "name": "LibriVox",
+                "desc": "LibriVox is a DRM-free collection of audiobooks that are provided at no charge."
+            },
+            {
+                "url": "https://libro.fm",
+                "name": "Libro.fm",
+                "desc": "Libro.fm offers DRM-free audiobooks, while also supporting local bookstores."
+            }
+        ]
+    },
+    {
+        "urlPattern": "https?://(www.)?messenger.com",
+        "alternatives": [
+            {
+                "url": "https://signal.org",
+                "name": "Signal",
+                "desc": "Signal is a popular private messaging, voice call, and video call service."
+            },
+            {
+                "url": "https://xmpp.org",
+                "name": "XMPP",
+                "desc": "XMPP is a widely-used free and open internet messaging standard."
+            },
+            {
+                "url": "https://quicksy.im",
+                "name": "Quicksy",
+                "desc": "Quicksy is an easy-to-use chat app."
+            },
+            {
+                "url": "https://zom.im/zomenglish.html",
+                "name": "Zom",
+                "desc": "Zom is an extremely easy to use and free open source messenger app."
+            },
+            {
+                "url": "https://matrix.org",
+                "name": "Matrix / Element",
+                "desc": "An open network for secure, decentralized communication."
+            },
+            {
+                "url": "https://jami.net",
+                "name": "Jami",
+                "desc": "Jami is a libre, easy-to-use alternative to Skype, with voice call, video call, and messaging."
+            }
+        ]
+    },
+    {
+        "urlPattern": "https://(www.)?google.com/analytics",
+        "alternatives": [
+            {
+                "url": "https://matomo.org",
+                "name": "Matomo",
+                "desc": "Matomo Analytics lets sites keep their visitor data private without sharing it with anyone else."
+            },
+            {
+                "url": "https://plausible.io",
+                "name": "Plausible Analytics",
+                "desc": "Plausible is a very simple and privacy-friendly analytics software."
+            },
+            {
+                "url": "https://goatcounter.com",
+                "name": "GoatCounter",
+                "desc": "GoatCounter is an open source web analytics platform available as a hosted service or self-hosted app."
+            }
+        ]
+    },
+    {
+        "urlPattern": "https://(www.)?google.com/calendar",
+        "alternatives": [
+            {
+                "url": "https://nextcloud.com",
+                "name": "Nextcloud",
+                "desc": "Nextcloud is an easy-to-use service that provides a range of optional add-ons, such as calendars."
+            },
+            {
+                "url": "https://tutanota.com",
+                "name": "Tutanota",
+                "desc": "Tutanota is an encrypted email and calendar service, based in Germany."
+            },
+            {
+                "url": "https://kolabnow.com",
+                "name": "Kolab Now",
+                "desc": "Kolab Now is a Swiss email provider with lots of extra services, aimed at business people, including a calendar."
+            },
+            {
+                "url": "https://etesync.com",
+                "name": "EteSync",
+                "desc": "EteSync is an open-source end-to-end encrypted sync tool for your calendars."
+            }
+        ]
+    },
+    {
+        "urlPattern": "https://(www.)?google.com/drive",
+        "alternatives": [
+            {
+                "url": "https://nextcloud.com",
+                "name": "Nextcloud",
+                "desc": "Nextcloud is an easy-to-use service that provides a range of optional add-ons."
+            },
+            {
+                "url": "https://cryptpad.fr",
+                "name": "CryptPad",
+                "desc": "CryptPad is a collection of open source and privacy-friendly collaboration tools."
+            },
+            {
+                "url": "https://etherpad.org",
+                "name": "Etherpad",
+                "desc": "Etherpad is an online text editor that can be used collaboratively."
+            },
+            {
+                "url": "https://syncthing.net",
+                "name": "Syncthing",
+                "desc": "Syncthing is a program to easily synchronize folders across two or more computers."
+            }
+        ]
+    },
+    {
+        "urlPattern": "https://(www.)?google.com/docs",
+        "alternatives": [
+            {
+                "url": "https://nextcloud.com",
+                "name": "Nextcloud",
+                "desc": "Nextcloud is an easy-to-use service that provides a range of optional add-ons."
+            },
+            {
+                "url": "https://cryptpad.fr",
+                "name": "CryptPad",
+                "desc": "CryptPad is a collection of open source and privacy-friendly collaboration tools."
+            },
+            {
+                "url": "https://etherpad.org",
+                "name": "Etherpad",
+                "desc": "Etherpad is an online text editor that can be used collaboratively."
+            },
+            {
+                "url": "https://syncthing.net",
+                "name": "Syncthing",
+                "desc": "Syncthing is a program to easily synchronize folders across two or more computers."
+            }
+        ]
+    },
+    {
+        "urlPattern": "https://(www.)?google.com/forms",
+        "alternatives": [
+            {
+                "url": "https://limesurvey.org",
+                "name": "LimeSurvey",
+                "desc": "LimeSurvey is a free and open source survey software."
+            },
+            {
+                "url": "https://apps.nextcloud.com/apps/forms",
+                "name": "Nextcloud Forms",
+                "desc": "Nextcloud Forms is an extension to Nextcloud, which allows for creating simple surveys and questionnaires."
+            },
+            {
+                "url": "https://webform.com",
+                "name": "Webform",
+                "desc": "Webform is a free and open source form software."
+            }
+        ]
+    },
+    {
+        "urlPattern": "https://hangouts.google.com",
+        "alternatives": [
+            {
+                "url": "https://jami.net",
+                "name": "Jami",
+                "desc": "Jami is a libre, easy-to-use alternative to Skype, with voice call, video call, and messaging."
+            },
+            {
+                "url": "https://jitsi.org/jitsi-meet",
+                "name": "Jitsi Meet",
+                "desc": "Jitsi Meet is a free and open source video chat app made by volunteers."
+            },
+            {
+                "url": "https://bigbluebutton.org",
+                "name": "BigBlueButton",
+                "desc": "BigBlueButton is a professional video conferencing tool, focused on online teaching and presenting."
+            }
+        ]
+    },
+    {
+        "urlPattern": "https://keep.google.com",
+        "alternatives": [
+            {
+                "url": "https://standardnotes.org",
+                "name": "Standard Notes",
+                "desc": "Standard Notes is a free and open source notes app, focusing on simplicity."
+            },
+            {
+                "url": "https://joplinapp.org",
+                "name": "Joplin",
+                "desc": "Joplin is a libre note taking and to-do app."
+            },
+            {
+                "url": "https://apps.nextcloud.com/apps/notes",
+                "name": "Nextcloud Notes",
+                "desc": "Nextcloud Notes is an extension to Nextcloud, which allows for organizing your notes."
+            }
+        ]
+    },
+    {
+        "urlPattern": "https://maps.google.com",
+        "alternatives": [
+            {
+                "url": "https://openstreetmap.org",
+                "name": "OpenStreetMap",
+                "desc": "OpenStreetMap is a huge user-made map site that anyone can use and edit."
+            },
+            {
+                "url": "https://qwant.com/maps",
+                "name": "Qwant Maps",
+                "desc": "Qwant Maps is a Google Maps replacement built upon OpenStreetMap."
+            }
+        ]
+    },
+    {
+        "urlPattern": "https://play.google.com",
+        "alternatives": [
+            {
+                "url": "https://f-droid.org",
+                "name": "F-Droid",
+                "desc": "F-Droid is an open source alternative app store."
+            }
+        ]
+    },
+    {
+        "urlPattern": "https://(www.)?instagram.com",
+        "alternatives": [
+            {
+                "url": "https://pixelfed.org",
+                "name": "Pixelfed",
+                "desc": "Pixelfed is a photo-oriented social network with filters, comments, likes, shares."
+            }
+        ]
+    },
+    {
+        "urlPattern": "https://(www.)?minecraft.net",
+        "alternatives": [
+            {
+                "url": "https://minetest.net",
+                "name": "Minetest",
+                "desc": "Minetest is a free and open source Minecraft-style game with huge worlds."
+            }
+        ]
+    },
+    {
+        "urlPattern": "https://(www.)?skype.com",
+        "alternatives": [
+            {
+                "url": "https://jami.net",
+                "name": "Jami",
+                "desc": "Jami is a libre, easy-to-use alternative to Skype, with voice call, video call, and messaging."
+            },
+            {
+                "url": "https://jitsi.org/jitsi-meet",
+                "name": "Jitsi Meet",
+                "desc": "Jitsi Meet is a free and open source video chat app made by volunteers."
+            },
+            {
+                "url": "https://bigbluebutton.org",
+                "name": "BigBlueButton",
+                "desc": "BigBlueButton is a professional video conferencing tool, focused on online teaching and presenting."
+            }
+        ]
+    },
+    {
+        "urlPattern": "https?://(www.)?whatsapp.com",
+        "alternatives": [
+            {
+                "url": "https://signal.org",
+                "name": "Signal",
+                "desc": "Signal is a popular private messaging, voice call, and video call service."
+            },
+            {
+                "url": "https://xmpp.org",
+                "name": "XMPP",
+                "desc": "XMPP is a widely-used free and open internet messaging standard."
+            },
+            {
+                "url": "https://quicksy.im",
+                "name": "Quicksy",
+                "desc": "Quicksy is an easy-to-use chat app."
+            },
+            {
+                "url": "https://zom.im/zomenglish.html",
+                "name": "Zom",
+                "desc": "Zom is an extremely easy to use and free open source messenger app."
+            },
+            {
+                "url": "https://matrix.org",
+                "name": "Matrix / Element",
+                "desc": "An open network for secure, decentralized communication."
+            },
+            {
+                "url": "https://jami.net",
+                "name": "Jami",
+                "desc": "Jami is a libre, easy-to-use alternative to Skype, with voice call, video call, and messaging."
+            }
+        ]
+    }
 ]
