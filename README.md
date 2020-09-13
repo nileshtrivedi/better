@@ -27,7 +27,7 @@ The pop-up shows an option to dismiss the suggestion forever for the current URL
 You can load this extension directly in Chrome or Firefox Developer Edition (after setting `xpinstall.signatures.required` to `false` in `about:config`).
 
 To submit to the stores, build a zip with: `zip -r -X archive.zip ./*`
-Before creating the zip, make sure to uncomment the local reference to `listUrl` in `onStartup()` and for Chrome store, remove `browser_specific_settings` from `manifest.json`
+Before creating the zip for the Chrome store, remove `browser_specific_settings` from `manifest.json`
 
 # Demo Video
 
