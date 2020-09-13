@@ -96,6 +96,11 @@
                 "url": "https://calibre-ebook.com",
                 "name": "Calibre",
                 "desc": "Calibre is a well-established and popular libre app, which lets you organise your eBook collection."
+            },
+            {
+                "url": "https://better.reads",
+                "name": "Better Reads",
+                "desc": "Its better, federated and all around awesome!"
             }
         ]
     },
