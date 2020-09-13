@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container" style="max-width: 420px">
+    <div class="row">
+      <div class="col">
+        <h2 class="font-weight-bold">Better</h2>
+        <p class="lead">Suggest an alternative service for this URL</p>
+        <div class="alert alert-info" id="currentURL"></div>
+        <form action="" method="GET" id="betterForm">
+          <div class="form-group">
+            <label for="basic-url">Better Name</label>
+            <div class="input-group mb-3">
+              <input type="text" id="betterName" name="betterName" class="form-control" id="basic-url">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="basic-url">Better URL</label>
+            <div class="input-group mb-3">
+              <input type="url" id="betterURL" name="betterURL" class="form-control" id="basic-url">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="basic-url">Better description</label>
+            <div class="input-group mb-3">
+              <input type="text" id="betterDescription" name="betterDescription" class="form-control" id="basic-url">
+            </div>
+          </div>
+          <button class="btn btn-warning font-weight-bold" id="suggestionSubmit">Submit suggestion</button>
+        </form>
+        <p class="text-muted">This will take you to a GitHub issue page</p>
+      </div>
+    </div>
+  </div>
+  <div id="error-content" class="hidden">
+  </div>
+  <script src="popup.js"></script>
+</body>
+
+</html>
