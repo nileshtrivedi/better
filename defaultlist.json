@@ -135,21 +135,6 @@
         ]
     },
     {
-        "urlPattern": "https://analytics.google.com",
-        "alternatives": [
-            {
-                "url": "https://matomo.org/",
-                "name": "Matomo",
-                "desc": "A powerful web analytics platform that gives you 100% data ownership"
-            },
-            {
-                "url": "https://umami.is/",
-                "name": "Umami",
-                "desc": "Privacy-focused, open-source alternative to Google Analytics"
-            }
-        ]
-    },
-    {
         "urlPattern": "https://(www.)?gmail.com",
         "alternatives": [
             {
@@ -321,6 +306,11 @@
                 "url": "https://matomo.org",
                 "name": "Matomo",
                 "desc": "Matomo Analytics lets sites keep their visitor data private without sharing it with anyone else."
+            },
+            {
+                "url": "https://umami.is",
+                "name": "Umami",
+                "desc": "Privacy-focused, open-source alternative to Google Analytics"
             },
             {
                 "url": "https://plausible.io",
