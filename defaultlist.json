@@ -300,7 +300,7 @@
         ]
     },
     {
-        "urlPattern": "https://(www.)?google.com/analytics",
+        "urlPattern": "https://marketingplatform.google.com/about/analytics/",
         "alternatives": [
             {
                 "url": "https://matomo.org",
