@@ -558,5 +558,15 @@
                 "desc": "Jami is a libre, easy-to-use alternative to Skype, with voice call, video call, and messaging."
             }
         ]
+    },
+    {
+        "urlPattern": "https://mail.google.com/",
+        "alternatives": [
+            {
+                "url": "https://protonmail.com",
+                "name": "Proton mail",
+                "desc": "high security and privacy in a growing email service ! from the team behind proton VPN."
+            }
+        ]
     }
 ]
