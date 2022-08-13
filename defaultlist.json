@@ -236,6 +236,11 @@
                 "url": "https://duckduckgo.com",
                 "name": "DuckDuckGo",
                 "desc": "DuckDuckGo is the most popular and easiest to use privacy-conscious search engine."
+            },
+            {
+                "url": "https://duckduckgo.com/",
+                "name": "DuckDuckGo",
+                "desc": "Privacy respecting search engine"
             }
         ]
     },
